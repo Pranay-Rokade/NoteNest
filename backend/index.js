@@ -11,5 +11,5 @@ app.use('/api/auth', require('./routes/auth'))
 app.use('/api/notes', require('./routes/notes'))
 
 app.listen(port, () => {
-    console.log(`Server listening at http://localhost:${port}`)
+    console.log(`NestNote backend listening at http://localhost:${port}`)
 })
