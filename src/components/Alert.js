@@ -6,6 +6,8 @@ export default function Alert(props) {
     if(word === 'danger'){
       return "Error";
     }
+    const lower = word.toLowerCase();
+    return lower.charAt(0).toUpperCase() + lower.slice(1);
   }
 
   return (
