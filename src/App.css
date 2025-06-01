@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('../public/background.jpg'); /* path relative to public folder */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white; /* optional, for readability */
+}

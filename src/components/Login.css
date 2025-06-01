@@ -1,0 +1,93 @@
+/* Import animations */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Apply global font and background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* Login container with glassmorphism effect */
+.login-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(125, 100, 255, 0.4);
+}
+
+/* Input fields with dark-glass effect */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid #777;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-color: #a177ff;
+    box-shadow: 0 0 0 0.25rem rgba(161, 119, 255, 0.25);
+}
+
+/* Label styling */
+.form-label {
+    color: #e2e2ff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Login Button Styles */
+.btn-primary {
+    background-color: #6a0dad;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(106, 13, 173, 0.4);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    background-color: #4b0082;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(106, 13, 173, 0.6);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(106, 13, 173, 0.4);
+}
+
+/* Disabled state */
+.btn-primary:disabled {
+    background-color: #642e66;
+    color: #777;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 15px;
+    }
+}

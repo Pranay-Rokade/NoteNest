@@ -1,0 +1,87 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+.note-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Neon spotlight card */
+.card-spotlight {
+    position: relative;
+    background-color: rgba(18, 18, 30, 0.5); /* 🔄 Reduced opacity from 0.95 to 0.5 */
+    border: 1px solid rgba(125, 100, 255, 0.3); /* 🔄 Slightly more visible border with glow tint */
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    color: #eee; /* 🔄 Slightly lighter text to improve contrast */
+    overflow: hidden;
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    --spotlight-color: rgba(125, 100, 255, 0.25);
+    backdrop-filter: blur(8px); /* 🔄 Slightly stronger blur to improve glass effect */
+    box-shadow: 0 0 25px rgba(125, 100, 255, 0.25); /* 🔄 Increased to maintain glow visibility */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-spotlight:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(125, 100, 255, 0.4); /* 🔄 Slightly increased glow on hover */
+}
+
+.card-spotlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at var(--mouse-x) var(--mouse-y),
+        var(--spotlight-color),
+        transparent 80%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.card-spotlight:hover::before {
+    opacity: 0.6;
+}
+
+.card-body {
+    position: relative;
+    z-index: 1;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 4px rgba(161, 119, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #ddd; /* 🔄 Slightly lighter for readability */
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.note-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.note-actions i {
+    cursor: pointer;
+    color: #b13fc8;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.note-actions i:hover {
+    color: #ff00fb;;
+    transform: scale(1.2);
+}

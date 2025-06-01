@@ -1,0 +1,65 @@
+/* League of Legends themed Navbar */
+.navbar {
+  background-color: rgba(10, 10, 26, 0.50) !important; /* Slight transparency */
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  box-shadow: 0 4px 12px rgba(125, 100, 255, 0.2);
+  border-bottom: 1px solid rgba(125, 100, 255, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+  color: #a57eff !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-shadow: 0 0 6px rgba(125, 100, 255, 0.6);
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #ccc !important;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: #7d64ff !important;
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border-color: rgba(125, 100, 255, 0.3);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(125, 100, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.btn-primary {
+  background-color: #7d64ff;
+  border-color: #7d64ff;
+  box-shadow: 0 0 8px rgba(125, 100, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #9d89ff;
+  border-color: #9d89ff;
+  box-shadow: 0 0 12px rgba(157, 137, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+
+  .btn-primary {
+    margin: 0.5rem 0;
+  }
+}
