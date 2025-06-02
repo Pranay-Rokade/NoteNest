@@ -10,24 +10,24 @@
 /* Neon spotlight card */
 .card-spotlight {
     position: relative;
-    background-color: rgba(18, 18, 30, 0.5); /* 🔄 Reduced opacity from 0.95 to 0.5 */
-    border: 1px solid rgba(125, 100, 255, 0.3); /* 🔄 Slightly more visible border with glow tint */
+    background-color: rgba(18, 18, 30, 0.5);
+    border: 1px solid rgba(125, 100, 255, 0.3);
     border-radius: 16px;
     padding: 1.5rem;
     margin: 1rem 0;
-    color: #eee; /* 🔄 Slightly lighter text to improve contrast */
+    color: #eee;
     overflow: hidden;
     --mouse-x: 50%;
     --mouse-y: 50%;
     --spotlight-color: rgba(125, 100, 255, 0.25);
-    backdrop-filter: blur(8px); /* 🔄 Slightly stronger blur to improve glass effect */
-    box-shadow: 0 0 25px rgba(125, 100, 255, 0.25); /* 🔄 Increased to maintain glow visibility */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 25px rgba(125, 100, 255, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-spotlight:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 30px rgba(125, 100, 255, 0.4); /* 🔄 Slightly increased glow on hover */
+    box-shadow: 0 0 30px rgba(125, 100, 255, 0.4);
 }
 
 .card-spotlight::before {
@@ -64,7 +64,7 @@
 
 .card-text {
     font-size: 1rem;
-    color: #ddd; /* 🔄 Slightly lighter for readability */
+    color: #ddd;
     margin-bottom: 1.5rem;
     line-height: 1.5;
 }
